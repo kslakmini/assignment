@@ -1,0 +1,26 @@
+.offerType {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: rgb(51, 51, 51);
+}
+.offerDiscription {
+  padding-top: 1.5rem;
+}
+.offerbody {
+    padding-top: 1rem;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  color: rgb(102, 102, 102);
+}
+.offerprice {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+.offerpricespan {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: rgb(51, 51, 51);
+}

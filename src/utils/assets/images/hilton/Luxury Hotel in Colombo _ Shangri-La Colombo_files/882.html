@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- saved from url=(0525)https://static.sojern.com/cip/a/882.html?f_v=v6_js&p_v=4&version=5&auto_url=https%3A%2F%2Fwww.shangri-la.com%2Fen%2Fcolombo%2Fshangrila%2F&auto_ccid=y28z5-fo26g-wu4pn-ey7gw-fv3kd&auto_ga=1288868437.1708579389&e_eml=null&auto_eml=&auto_eml_count=0&auto_eml_domain=&ws=1536x703&tz=-330&n=tf%3ANGd8MS40fDIwMHw4fDR8ZW4tVVN8ZW4tVVMsZW58V2luMzJ8ZmFsc2V8V2luZG93c3wxLjI1fDI0fDI0fDE1MzZ8ODI0fDQyOTQ3MDUxNTJ8QXNpYS9DYWxjdXR0YXxmYWxzZQ%3D%3D&auto_eml_list=&pc=https%3A%2F%2Fwww.shangri-la.com%2Fen%2Fcolombo%2Fshangrila%2F&vid=hot&cid= -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+    <title>APAC Shangri La - 882</title>
+    <script src="./hasher.js.download"></script>
+    <script src="./create_params.js.download"></script>
+  </head>
+  <body data-new-gr-c-s-check-loaded="14.1156.0" data-gr-ext-installed="">  
+    <script>
+    (function(){
+        const hotelData = [
+          {url:"manila/edsashangrila/", code:"ESL"},
+          {url:"yanucaisland/fijianresort/", code:"FIJ"},
+          {url:"penang/goldensandsresort/", code:"GSH"},
+          {url:"jen/singapore/orchardgateway/", code:"THOG"},
+          {url:"jen/penang/georgetown/", code:"SLP"},
+          {url:"jen/singapore/tanglin/", code:"THS"},
+          {url:"cebu/mactanresort/", code:"MAC"},
+          {url:"penang/rasasayangresort/", code:"RSR"},
+          {url:"singapore/rasasentosaresort/", code:"SEN"},
+          {url:"bangkok/shangrila/", code:"SLBK"},
+          {url:"boracay/boracayresort/", code:"SLBO"},
+          {url:"chiangmai/shangrila/", code:"SLCM"},
+          {url:"manila/shangrilaatthefort/", code:"SLFM"},
+          {url:"kualalumpur/shangrila/", code:"SLKL"},
+          {url:"singapore/shangrila", code:"SLS"},
+          {url:"sydney/shangrila/", code:"SLSN"},
+          {url:"kotakinabalu/tanjungaruresort/", code:"TAH"},
+          {url:"kualalumpur/traders/", code:"THKL"}
+        ];
+
+        const beUrlData = [
+            {"url": 'confirm-reservation', 'code': 'CONVERSION'},
+            {"url": 'select-room-rate', 'code': 'SEARCH'},
+            {"url": 'reservations/check-out', 'code': 'SHOPPING_CART'}
+        ]
+
+        function ifSplit(url, param) {
+            if (url.includes(param+'=')) {
+            console.log(url.split(param+'=')[1].split('&')[0])
+                return url.split(param+'=')[1].split('&')[0]
+            }
+            return ''
+        }
+
+        function getCodeFromURL(inputString) {
+            for (let item of hotelData) {
+                if (inputString.split('?')[0].endsWith(item.url)) {
+                    return { code: item.code, type: 'HOME_PAGE' };
+                }
+                if (inputString.includes(item.url) && inputString.includes('room')) {
+                    return { code: item.code, type: 'PRODUCT' };
+                }
+                if (inputString.includes(item.url)) {
+                    return { code: item.code, type: 'TRACKING' };
+                }
+            }
+            return { code: '', type: '' };
+        }
+
+        function getPtFromURL(inputString) {
+            for (let item of beUrlData) {
+                if (inputString.includes(item.url)) {
+                    return item.code
+                }
+            }
+            return '';
+        }
+
+        function fireContainer(params){
+              /* Please do not modify the below code. */
+              params.et = {"HOME_PAGE":null,"SEARCH":"hs","PRODUCT":"hpr","SHOPPING_CART":"hcart","CONVERSION":"hc","TRACKING":null}[params.pt] || '';
+              var paramsArr = [];
+              for(key in params) { paramsArr.push(key + '=' + encodeURIComponent(params[key])) };
+          
+              var pl = document.createElement('script');
+              pl.type = 'text/javascript';
+              pl.async = true;
+              pl.src = "https://beacon.sojern.com/pixel/cp/24?f_v=cp_v3_js&p_v=6&" + paramsArr.join('&');
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(pl);
+          
+        }
+
+        function fireStandardPixels(params, pixel_ids) {
+              pixel_ids.forEach(pixel_id => {
+              /* Please do not modify the below code. */
+              var cid = [];
+              var paramsArr = [];
+              var cidParams = [];
+              var pl = document.createElement('script');
+              var defaultParams = {"vid":"hot","et":"hc"};
+              for(key in defaultParams) { params[key] = defaultParams[key]; };
+              for(key in cidParams) { cid.push(params[cidParams[key]]); };
+              params.cid = cid.join('|');
+              for(key in params) { paramsArr.push(key + '=' + encodeURIComponent(params[key])) };
+              pl.type = 'text/javascript';
+              pl.async = true;
+              pl.src = 'https://beacon.sojern.com/pixel/p/'+pixel_id+'?f_v=v6_js&p_v=1&' + paramsArr.join('&');
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(pl);
+            })
+        }
+
+          all_params = window.location.search.slice(1).split('&');
+          all_params.push('auto_out=email');
+          var params = sjrn_create_params(all_params);
+          params.pname = window.location.search.slice(1)
+          var is_fire = true
+          var pixel_ids = []
+          
+          //Double ensure no email is passed back to database.
+          params.sha256_eml = "";
+          params.md5_eml = "";
+          params.sha1_eml = "";
+          
+          if (params.hp){
+              params.hp = params.hp.replace(/,/g, '');
+          }
+
+
+          //Set up container params
+          if ('domain' in params) {
+              let url = params.domain
+              params.hpid = params.hotelCode ? params.hotelCode : ifSplit(url,'hotelCode');
+              params.hconfno = ifSplit(url,'bookingId');
+              if (!params.hpid){
+                result = getCodeFromURL(url);
+                params.hpid = result.code;
+                params.pt = result.type;
+              }
+              if (!params.pt){
+                params.pt = getPtFromURL(url);
+              }
+          }
+
+          if (params.pt && params.pt === "CONVERSION" && parseInt(params.hp) === 0) {
+            var zero_values_booking_pixel_ids = {
+              "failed_payment": "366820",
+              "points_payment": "366821"
+            }
+            is_fire = false
+            if (params.ffl && parseInt(params.ffl) > 0) {
+              pixel_ids.push(zero_values_booking_pixel_ids["points_payment"])
+            } else {
+              pixel_ids.push(zero_values_booking_pixel_ids["failed_payment"])
+            }
+          }
+          
+          // do not fire zero values bookings to conversion pixel as it means failed bookings
+          if (params.pt && params.hpid && is_fire){
+            fireContainer(params);
+          }
+          //fire standard pixels here by push id into the pixel_ids array
+          if (pixel_ids.length > 0) {
+            fireStandardPixels(params, pixel_ids)
+          }    
+        })();
+    </script>
+  
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

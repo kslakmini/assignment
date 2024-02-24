@@ -1,0 +1,67 @@
+@font-face {
+  font-family: cinamon;
+  src: url('../../../public/fonts/Bodoni\ Std\ Book\ Italic.otf');
+}
+@font-face {
+  font-family: cinamonFooter;
+  src: url('../../../public/fonts/UniversLTStd-Light.otf');
+}
+.css-ahj2mt-MuiTypography-root {
+    font-family: cinamon;
+}
+.scrollbtn {
+  font-family: cinamon;
+  font-size: 20px;
+  background-color: none;
+  border: none;
+  background: none;
+  color: #ffffff;
+  background-size: cover;
+  z-index: 5;
+  background-image: url("../../utils/assets/images/cinnamon/stay-round.png");
+  background-repeat: no-repeat;
+  width: 7rem;
+  height: 7rem;
+}
+.scrollbtn :hover{
+  cursor: pointer;
+}
+.fhead{
+  font-family: cinamon;
+    color:rgb(119, 50, 139);
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+}
+.fsub{
+  font-family: cinamonFooter;
+    color:#A8A8A8;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 400;
+}
+.fsubicon{
+    color:#A8A8A8;
+    font-weight: 400;
+    padding-right: 1rem;
+}
+.emailsubmit {
+  display: flex;
+  border: 1px #d3d4e4 solid;
+  font-family: 'UniversLT-Light, serif';
+}
+.emailsubmitbtn {
+  width: 4rem;
+  background: none;
+  border: none;
+  color: #000;
+}
+.emailsubmitbtn:hover {
+  background-color: #e7e7e7;
+}
+
+.emailinput {
+  width: 100%;
+  padding: 2rem 1rem;
+  border: none;
+}

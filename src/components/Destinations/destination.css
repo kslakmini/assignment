@@ -1,0 +1,11 @@
+@font-face {
+  font-family: cinamon;
+  src: url("../../../public/fonts/Bodoni\ Std\ Book\ Italic.otf");
+}
+.headtext {
+  font-family: cinamon;
+  color: rgb(119, 50, 139);
+  font-size: "70px";
+  line-height: "77px";
+  font-weight: 500;
+}
